@@ -10,7 +10,8 @@ const Login = () => {
   const { loggedIn, setLoggedIn } = useContext(CheckLoginContext);
   let history = useHistory();
   let location = useLocation();
-  let { from } = location.state || { from: { pathname: "/" } };
+  let { from } = { from: { pathname: "/" } };
+  /* let { from } = location.state || { from: { pathname: "/" } }; */
 
   const handleGoogleSignIn = () => {
     googleSignIn().then((res) => {

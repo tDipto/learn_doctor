@@ -1,6 +1,6 @@
 import React from "react";
 import Calendar from "react-calendar";
-
+import "react-calendar/dist/Calendar.css";
 const DashboardCalender = ({ dateValue, setDateValue }) => {
   return (
     <div
@@ -11,11 +11,7 @@ const DashboardCalender = ({ dateValue, setDateValue }) => {
         marginLeft: "5rem",
       }}
     >
-      <Calendar
-        className="calendar-design"
-        onChange={setDateValue}
-        value={dateValue}
-      />
+      <Calendar onChange={setDateValue} value={dateValue} />
     </div>
   );
 };
